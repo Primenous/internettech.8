@@ -144,7 +144,7 @@ function common_divisor(){
     var divisor_value_5 = document.getElementById("divisor_value_5").value;
     let numbers = [divisor_value_1, divisor_value_2, divisor_value_3, divisor_value_4, divisor_value_5];
     result = lcmArray(numbers);
-    document.getElementById("lcd_result").textContent = lcd;
+    document.getElementById("lcd_result").textContent = result;
 }
 
 function lcmArray(arr) {
