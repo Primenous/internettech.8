@@ -45,6 +45,11 @@ function sumofdigit(a){
 function baishin(){
     var value = document.getElementById("baishin_value").value;
 
+    if(value > 108 || value < 1){
+        alert("Ail Baihgui.");
+        return;
+    }
+
     var davhar = 9;
     var davhar_ail = 4;
     var orts = 3;
@@ -58,8 +63,8 @@ function baishin(){
     davhar_result = davhar_medeh(value, baishin_ail, niit, davhar_ail);
     document.getElementById("davhar_result").textContent = davhar_result;
 
-    toot_result = toot_medeh(value, baishin_ail, niit);
-    document.getElementById("toot_result").textContent = toot_result;
+    haalga_result = haalga_medeh(value, davhar_ail, niit);
+    document.getElementById("haalga_result").textContent = haalga_result;
 }
 
 function orts_medeh(value, baishin_ail, niit){
@@ -95,18 +100,18 @@ function davhar_medeh(value, baishin_ail, niit, davhar_ail){
     }
 }
 
-function toot_medeh(value, baishin_ail, niit){
-    var baishin_ail_1 = baishin_ail;
-    var toot_result = 1;
+function haalga_medeh(value, davhar_ail, niit){
+    var davhar_ail_1 = davhar_ail;
+    var haalga_result = 1;
     for (let i = 1; i <= niit; i++){
-        if(i > baishin_ail_1){
-            baishin_ail_1 = baishin_ail_1 + baishin_ail;
-            toot_result = 1;
+        if(i > davhar_ail_1){
+            davhar_ail_1 = davhar_ail_1 + davhar_ail;
+            haalga_result = 1;
         }
         if(i == value){
-            return toot_result;
+            return haalga_result;
         }
-        toot_result++;
+        haalga_result++;
     }
 }
 
@@ -138,28 +143,28 @@ function common_divisor(){
     var divisor_value_4 = document.getElementById("divisor_value_4").value;
     var divisor_value_5 = document.getElementById("divisor_value_5").value;
     let numbers = [divisor_value_1, divisor_value_2, divisor_value_3, divisor_value_4, divisor_value_5];
-    let lcd = findgcd(numbers);
+    result = lcmArray(numbers);
     document.getElementById("lcd_result").textContent = lcd;
 }
 
-function gcd(a, b){
-    while (b !== 0) {
-        let temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
-}
-
-function findgcd(array) {
-    let result = array[0];
-    for (let i = 1; i < array.length; i++) {
-        result = gcd(result, array[i]);
-        if (result === 1) {
-            return 1;
-        }
+function lcmArray(arr) {
+    let result = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        result = lcm(result, arr[i]);
     }
     return result;
+}
+
+function lcm(a, b) {
+    if (a === 0 || b === 0) return 0;
+    let greater = Math.max(a, b);
+    let smaller = Math.min(a, b);
+
+    while (greater % smaller !== 0) {
+        greater += Math.max(a, b);
+    }
+
+    return greater;
 }
 
 function calculation(){
