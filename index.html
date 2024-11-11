@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <div class="exercise">
+        <p>1. Гараас өгсөн тооны цифрүүдийн нийлбэр нь палимдром мөн эсэхийг шалга</p>
+        <input type="text" id="palindrome_value" placeholder="Enter Value">
+        <button onclick="checkpalindrome()">Go</button>
+
+        <p>Digits Sum:</p>
+        <p id="digits_sum"></p>
+
+        <p id="ex1_result"></p>
+    </div>
+
+    <div class="exercise">
+        <p>2. Чоно 25 км/ц хурдтай, туулай 18 км/ц хурдтай. Гараас өгсөн зайтай байхад хэдэн минут хэдэн секундын дараа гэхэд гүйцэх вэ</p>
+        <input type="text" id="distance_value" placeholder="Enter Value">
+        <button onclick="wolf_rabbit()">Go</button>
+
+        <p>Minutes: </p>
+        <p id="minute_result"></p>
+        <p>Seconds: </p>
+        <p id="second_result"></p>
+    </div>  
+
+    <div class="exercise">
+        <p>3. Байшин 9 давхар, 3 орцтой, давхартаа 4 айлтай бол гараас өгсөн тоот нь хэддүгээр орцны хэддүгээр давхарын хэд дэх хаалга вэ</p>
+        <input type="text" id="baishin_value" placeholder="Enter Value">
+        <button onclick="baishin()">Go</button>
+
+        <p>Orts: </p>
+        <p id="orts_result"></p>
+        <p>Davhar: </p>
+        <p id="davhar_result"></p>
+        <p>Toot: </p>
+        <p id="toot_result"></p>
+    </div> 
+    
+    <div class="exercise">
+        <p>4. Array-д өгөгдсөн 5 тооны хамгийн бага ерөнхий хуваагдагчийг ол</p>
+
+        <input type="text" id="divisor_value_1" placeholder="Enter Value">
+        <input type="text" id="divisor_value_2" placeholder="Enter Value">
+        <input type="text" id="divisor_value_3" placeholder="Enter Value">
+        <input type="text" id="divisor_value_4" placeholder="Enter Value">
+        <input type="text" id="divisor_value_5" placeholder="Enter Value">
+        <button onclick="common_divisor()">Go</button>
+        <p>Result: </p>
+        <p id="lcd_result"></p>
+    </div>
+
+    <div class="exercise">
+        <p>5. Вэб сайтруу өглөө ороход гараас өгсөн тооны 2 зэрэгийг, орой ороход гараас өгсөн тооны язгуурыг ол.</p>
+
+        <input type="text" id="a_number" placeholder="Enter Value">
+        <button onclick="calculation()">Go</button>
+        <p id="date"></p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
